@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Lovatic Experience</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Ingressos da Lovatic Experience.">
+<meta name="theme-color" content="#0b0709">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ingressos · Lovatic Experience">
+<meta property="og:description" content="Escolha sua cidade e garanta seu ingresso.">
+<meta property="og:image" content="https://lovatic.gnarlyeventos.com.br/og.jpg">
+<meta property="og:url" content="https://lovatic.gnarlyeventos.com.br/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M5 9.2 1 5.3a2.3 2.3 0 0 1 4-2.6 2.3 2.3 0 0 1 4 2.6z' fill='%23ff2d95'/%3E%3C/svg%3E">
+<!-- Google tag (Analytics G-437SS7TQKQ) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-W2X5PHGB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-437SS7TQKQ');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&family=Nunito:wght@600;800;900&display=swap">
+<style>
+/* Palco de show pop rock: luzes rosa varrendo o fundo, letreiro neon na entrada,
+   pedaleira como menu e a setlist (papel colado no palco) onde abre cada seção. */
+:root{
+  --palco:#0b0709;       /* fundo */
+  --palco-2:#1a0d14;
+  --rosa:#ff1f8c;        /* neon */
+  --rosa-claro:#ff8cc6;
+  --vermelho:#ff3b3b;
+  --roxo:#8b5cf6;
+  --prata:#c9c3cc;
+  --papel:#f6f1e6;       /* setlist */
+  --tinta:#16111a;
+  --texto:#fff3f8;
+  --texto-2:#c8b6c1;
+  --linha:#3b2130;
+  --fita:rgba(205,200,210,.78);
+  --f-show:"Anton",Impact,"Arial Narrow Bold",sans-serif;
+  --f-mao:"Permanent Marker","Comic Sans MS",cursive;
+  --f-texto:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{min-height:100%}
+body{margin:0;background:var(--palco);color:var(--texto);font-family:var(--f-texto);font-weight:600;font-size:16px;line-height:1.45;overflow-x:hidden;-webkit-tap-highlight-color:transparent}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--rosa-claro);outline-offset:3px}
+
+/* ---------- Fundo: palco ---------- */
+.fundo{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;
+  background:radial-gradient(120% 70% at 50% 110%,#3a0d24 0%,transparent 60%),linear-gradient(180deg,#000 0%,var(--palco-2) 70%,var(--palco) 100%)}
+.luz{position:absolute;top:-20vh;width:70vmax;height:140vh;transform-origin:50% 0;
+  background:linear-gradient(180deg,rgba(255,45,149,.38),rgba(255,45,149,.08) 55%,transparent 80%);
+  clip-path:polygon(47% 0,53% 0,100% 100%,0 100%);filter:blur(6px);mix-blend-mode:screen}
+.luz.e{left:-30vmax;animation:varre-e 7s ease-in-out infinite alternate}
+.luz.d{right:-30vmax;animation:varre-d 8s ease-in-out infinite alternate;background:linear-gradient(180deg,rgba(139,92,246,.34),rgba(139,92,246,.07) 55%,transparent 80%)}
+@keyframes varre-e{from{transform:rotate(-28deg)}to{transform:rotate(-6deg)}}
+@keyframes varre-d{from{transform:rotate(26deg)}to{transform:rotate(6deg)}}
+.fumaca{position:absolute;left:-10%;right:-10%;bottom:-6vh;height:38vh;
+  background:radial-gradient(50% 60% at 25% 70%,rgba(255,140,198,.16),transparent 70%),radial-gradient(45% 55% at 75% 75%,rgba(201,195,204,.12),transparent 70%);
+  filter:blur(18px);animation:fumaca 12s ease-in-out infinite alternate}
+@keyframes fumaca{to{transform:translateX(4%) scale(1.06)}}
+.grao{position:fixed;inset:-50%;z-index:40;pointer-events:none;opacity:.13;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:grao .9s steps(3) infinite}
+@keyframes grao{33%{transform:translate(-3%,2%)}66%{transform:translate(2%,-3%)}}
+
+/* ---------- Letreiro (nome da festa) ---------- */
+.letreiro{display:grid;justify-items:center;line-height:.86;text-align:center;user-select:none}
+.letreiro .nome{font-family:var(--f-show);font-size:clamp(4rem,22vw,7.4rem);letter-spacing:.02em;color:#ffe3f1;
+  text-shadow:0 0 4px #fff,0 0 12px var(--rosa),0 0 28px var(--rosa),0 0 60px var(--rosa);animation:neon 5s infinite}
+.letreiro .logo{width:min(92%,440px);height:auto;filter:drop-shadow(0 0 14px rgba(255,31,140,.55)) drop-shadow(0 0 40px rgba(255,31,140,.35));animation:neon 5s infinite}
+.show .letreiro .logo{width:min(80%,360px)}
+.letreiro .sob{font-family:var(--f-show);font-size:clamp(1.05rem,5.6vw,1.9rem);letter-spacing:.42em;padding-left:.42em;margin-top:.5em;color:var(--prata)}
+@keyframes neon{0%,18%,22%,62%,64%,100%{opacity:1}20%,63%{opacity:.45}}
+
+/* ---------- Entrada ---------- */
+.intro{position:fixed;inset:0;z-index:20;display:grid;place-items:center;text-align:center;overflow-y:auto;
+  padding-block:24px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.intro-miolo{display:grid;justify-items:center;gap:26px;width:min(100%,520px)}
+.passe{position:relative;border:0;cursor:pointer;width:200px;padding:30px 18px 18px;border-radius:12px;color:var(--tinta);
+  background:linear-gradient(160deg,#fff 0%,#ffd6ea 100%);box-shadow:0 14px 30px rgba(0,0,0,.6),0 0 0 3px var(--rosa);
+  transform:rotate(-4deg);transition:transform .15s ease;display:grid;gap:4px;animation:balanca 3.2s ease-in-out infinite}
+.passe::before{content:"";position:absolute;left:50%;top:10px;width:38px;height:9px;margin-left:-19px;border-radius:9px;background:var(--palco);box-shadow:inset 0 1px 2px rgba(0,0,0,.6)}
+.passe .tipo{font-family:var(--f-show);font-size:2.1rem;line-height:1;letter-spacing:.03em;color:var(--rosa)}
+.passe .acao{font-family:var(--f-texto);font-weight:900;font-size:.95rem;letter-spacing:.14em;background:var(--tinta);color:#fff;border-radius:6px;padding:8px 6px;margin-top:6px}
+.passe:hover{animation-play-state:paused;transform:rotate(0) scale(1.03)}
+@keyframes balanca{50%{transform:rotate(3deg)}}
+.contagem{font-weight:900;font-size:1rem;letter-spacing:.06em;color:var(--rosa-claro)}
+.idade{margin:0;font-size:.95rem;line-height:1.55;color:var(--texto)}
+.idade b{display:block;font-weight:900;font-size:1rem;letter-spacing:.06em;color:#fff}
+.intro.saindo{animation:sai .45s ease-in forwards}
+@keyframes sai{to{opacity:0;transform:scale(1.06)}}
+
+/* ---------- Página ---------- */
+.show{position:relative;z-index:5;width:min(100%,600px);margin:0 auto;
+  padding-block:0 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:grid;gap:22px}
+.show.entra{animation:entra .5s ease-out}
+@keyframes entra{from{opacity:0;transform:translateY(12px)}}
+.topo{position:sticky;top:env(safe-area-inset-top,0px);z-index:8;display:flex;justify-content:space-between;align-items:center;gap:12px;
+  margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding:12px max(16px,env(safe-area-inset-left,0px));
+  background:rgba(11,7,9,.86);backdrop-filter:blur(6px);border-bottom:1px solid var(--linha);
+  font-family:var(--f-show);font-size:1.05rem;letter-spacing:.08em}
+.topo .ao-vivo{display:inline-flex;align-items:center;gap:8px}
+.topo .ao-vivo::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--vermelho);box-shadow:0 0 10px var(--vermelho);animation:neon 2s infinite}
+.topo .datas{color:var(--rosa-claro)}
+.show .letreiro{padding-top:8px}
+.show .letreiro .nome{font-size:clamp(3.2rem,17vw,5.6rem)}
+
+/* Pedaleira (menu) */
+.pedaleira{background:linear-gradient(180deg,#24161d,#140b10);border-radius:14px;padding:14px;
+  box-shadow:inset 0 2px 0 rgba(255,255,255,.06),0 10px 0 #050304,0 14px 24px rgba(0,0,0,.6)}
+.pedais{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0;padding:0;list-style:none}
+.pedais li.largo{grid-column:1/-1}
+.pedal{position:relative;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;width:100%;min-height:62px;
+  padding:10px 12px;border:0;border-radius:10px;cursor:pointer;text-decoration:none;text-align:left;color:#fff;
+  background:linear-gradient(180deg,color-mix(in srgb,var(--c) 92%,#fff),var(--c) 40%,color-mix(in srgb,var(--c) 70%,#000));
+  box-shadow:0 5px 0 color-mix(in srgb,var(--c) 40%,#000),inset 0 -3px 0 rgba(0,0,0,.2);transition:transform .08s,box-shadow .08s}
+.pedal svg{width:26px;height:26px;flex:none}
+.pedal .rot{font-family:var(--f-texto);font-weight:900;font-size:1.05rem;line-height:1.15;text-shadow:0 1px 0 rgba(0,0,0,.35);min-width:0}
+.pedal .led{width:10px;height:10px;border-radius:50%;background:#3a0a14;box-shadow:inset 0 1px 2px rgba(0,0,0,.6)}
+.pedal[aria-current="true"] .led{background:#ff4a4a;box-shadow:0 0 8px 2px #ff4a4a}
+.pedal:active,.pedal[aria-current="true"]{transform:translateY(4px);box-shadow:0 1px 0 color-mix(in srgb,var(--c) 40%,#000),inset 0 -3px 0 rgba(0,0,0,.2)}
+.largo .pedal{grid-template-columns:auto auto auto;justify-content:center}
+.largo .pedal .rot{font-family:var(--f-show);font-weight:400;font-size:1.45rem;letter-spacing:.06em}
+
+/* Setlist (onde abre cada seção) */
+.setlist{position:relative;background:var(--papel);color:var(--tinta);border-radius:3px;padding:26px 16px 18px;
+  transform:rotate(-.6deg);box-shadow:0 18px 30px rgba(0,0,0,.55)}
+.setlist::before,.setlist::after{content:"";position:absolute;top:-10px;width:86px;height:24px;background:var(--fita);box-shadow:0 1px 2px rgba(0,0,0,.25)}
+.setlist::before{left:-14px;transform:rotate(-24deg)}
+.setlist::after{right:-14px;transform:rotate(22deg)}
+.set-topo{display:flex;justify-content:space-between;align-items:baseline;gap:10px;border-bottom:3px solid var(--tinta);padding-bottom:8px;margin-bottom:14px}
+.set-topo h2{margin:0;font-family:var(--f-mao);font-weight:400;font-size:1.9rem;line-height:1}
+.set-topo small{font-family:var(--f-mao);font-size:1rem;color:#5a4a55}
+.set-corpo{display:grid;gap:12px}
+.vazio{font-family:var(--f-mao);font-size:1.25rem;text-align:center;padding:18px 8px;line-height:1.4}
+
+/* Ingressos */
+.evento{display:grid;grid-template-columns:68px 1fr;gap:12px;padding-bottom:12px;border-bottom:2px dashed #d4c9cf}
+.evento:last-child{border-bottom:0;padding-bottom:0}
+.data{display:grid;justify-items:center;align-content:center;gap:2px;background:var(--tinta);color:#fff;border-radius:6px;padding:9px 4px;align-self:start}
+.data .dia{font-family:var(--f-show);font-size:2rem;line-height:1;color:var(--rosa)}
+.data .mes{font-weight:900;font-size:.85rem;letter-spacing:.06em}
+.data .sem{font-weight:900;font-size:.78rem;letter-spacing:.06em;color:var(--prata)}
+.ev-info{min-width:0;display:grid;gap:3px;align-content:start}
+.ev-topo{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px}
+.cidade{font-family:var(--f-show);font-weight:400;font-size:1.6rem;line-height:1.05;margin:0;letter-spacing:.02em;text-wrap:balance}
+.selo{font-weight:900;font-size:.72rem;letter-spacing:.06em;padding:3px 8px;border-radius:3px;color:#fff;background:var(--rosa)}
+.selo.ultimos{background:var(--vermelho)}
+.selo.esgotado{background:#7d7380}
+.sub{font-weight:900;color:#c4136f;font-size:.95rem}
+.onde{font-size:.98rem}
+.comprar{justify-self:start;margin-top:6px;display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:900;font-size:1.05rem;letter-spacing:.03em;color:#fff;
+  background:var(--rosa);padding:10px 20px;border-radius:999px;box-shadow:0 4px 0 #8f0f52;transition:transform .08s,box-shadow .08s}
+.comprar:active{transform:translateY(3px);box-shadow:0 1px 0 #8f0f52}
+.comprar.off{background:#9a909d;box-shadow:0 4px 0 #5d5560;pointer-events:none}
+
+/* Fale conosco */
+.balao{background:#fff;border:2px solid var(--tinta);border-radius:14px 14px 14px 3px;padding:12px 14px;font-size:1.02rem}
+.balao p{margin:0}.balao p+p{margin-top:8px}
+.num{font-weight:900;color:#c4136f;user-select:all}
+.acoes{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;cursor:pointer;text-decoration:none;font-weight:900;font-size:1rem;letter-spacing:.03em;
+  padding:11px 18px;border-radius:999px;color:#fff;background:var(--c,var(--rosa));box-shadow:0 4px 0 color-mix(in srgb,var(--c,var(--rosa)) 45%,#000);transition:transform .08s,box-shadow .08s}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 color-mix(in srgb,var(--c,var(--rosa)) 45%,#000)}
+.form-msg{display:flex;gap:8px}
+.form-msg input{flex:1;min-width:0;background:#fff;border:2px solid var(--tinta);border-radius:999px;color:var(--tinta);font:inherit;font-size:1.05rem;padding:10px 14px}
+.form-msg input::placeholder{color:#8a7a85}
+
+/* Playlist */
+.disco{display:grid;grid-template-columns:86px 1fr;gap:14px;align-items:center}
+.disco svg{width:86px;height:86px;animation:gira 6s linear infinite}
+@keyframes gira{to{transform:rotate(360deg)}}
+.disco h3{font-family:var(--f-show);font-weight:400;font-size:1.4rem;letter-spacing:.03em;margin:0 0 2px}
+.disco p{margin:0 0 10px;font-size:.98rem}
+.pendente{font-family:var(--f-mao);font-size:.95rem;color:#c4136f;margin-left:8px;vertical-align:middle}
+
+/* Fotos */
+.album{display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;padding:14px;text-decoration:none;color:#fff;background:var(--tinta);border-radius:10px}
+.album b{display:block;font-family:var(--f-show);font-weight:400;font-size:1.35rem;letter-spacing:.03em}
+.album small{display:block;font-weight:800;font-size:.92rem;color:var(--texto-2)}
+.album .seta{width:42px;height:42px;border-radius:50%;background:var(--rosa);display:grid;place-items:center;font-size:1.4rem;font-weight:900}
+.grade{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.grade button{border:0;padding:5px 5px 14px;cursor:pointer;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.25);max-width:100%}
+.grade button:nth-child(odd){transform:rotate(-2deg)}.grade button:nth-child(even){transform:rotate(1.6deg)}
+.grade img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.vaga{aspect-ratio:3/4;border:2px dashed #cbbfc6;display:grid;place-items:center;font-family:var(--f-mao);font-size:.85rem;color:#9a8a94;text-align:center;padding:4px}
+.visor{position:fixed;inset:0;z-index:60;background:rgba(5,3,4,.95);display:grid;grid-template-rows:auto 1fr auto;
+  padding:calc(12px + env(safe-area-inset-top,0px)) max(12px,env(safe-area-inset-right,0px)) calc(16px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));touch-action:pan-y}
+.visor-topo{display:flex;justify-content:space-between;align-items:center;font-weight:900}
+.visor-img{display:grid;place-items:center;min-height:0;padding-block:12px}
+.visor-img img{max-height:100%;max-width:100%;object-fit:contain}
+.visor-nav{display:flex;justify-content:center;gap:14px}
+.x{background:none;border:2px solid var(--linha);border-radius:999px;color:var(--texto);font-weight:900;font-size:.95rem;padding:9px 16px;cursor:pointer}
+
+.rodape{text-align:center;font-size:.95rem;line-height:1.6}
+.rodape b{display:block;font-weight:900;letter-spacing:.06em;color:var(--rosa-claro)}
+
+@media (max-width:380px){.pedal .rot{font-size:.95rem}.cidade{font-size:1.45rem}.evento{grid-template-columns:60px 1fr}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="fundo" aria-hidden="true"><div class="luz e"></div><div class="luz d"></div><div class="fumaca"></div></div>
+<div class="grao" aria-hidden="true"></div>
+
+<section class="intro" id="intro" aria-label="Entrada">
+  <div class="intro-miolo">
+    <div class="letreiro" id="logo-intro"><span class="nome">LOVATIC</span><span class="sob">EXPERIENCE</span></div>
+    <button class="passe" id="entrar" type="button"><span class="tipo">ALL ACCESS</span><span class="acao">ENTRAR</span></button>
+    <div class="contagem" id="contagem">&nbsp;</div>
+    <p class="idade"><b>PARA MAIORES DE 18 ANOS</b>Obrigatório apresentação de documento original com foto</p>
+  </div>
+</section>
+
+<main class="show" id="show" hidden>
+  <header class="topo"><span class="ao-vivo">LOVATIC EXPERIENCE</span><span class="datas" id="topo-datas"></span></header>
+  <div class="letreiro" id="logo-topo"><span class="nome">LOVATIC</span><span class="sob">EXPERIENCE</span></div>
+
+  <nav class="pedaleira" aria-label="Menu"><ul class="pedais" id="pedais"></ul></nav>
+
+  <section class="setlist" aria-live="polite">
+    <div class="set-topo"><h2 id="set-titulo">Ingressos</h2><small id="set-info"></small></div>
+    <div class="set-corpo" id="set"></div>
+  </section>
+
+  <footer class="rodape"><b>PARA MAIORES DE 18 ANOS</b>Obrigatório apresentação de documento original com foto</footer>
+</main>
+
+<div class="visor" id="visor" hidden role="dialog" aria-modal="true" aria-label="Foto">
+  <div class="visor-topo"><span id="visor-n">1/9</span><button class="x" id="visor-fechar" type="button">Fechar</button></div>
+  <div class="visor-img"><img id="visor-img" alt=""></div>
+  <div class="visor-nav"><button class="x" id="visor-ant" type="button">‹ Anterior</button><button class="x" id="visor-prox" type="button">Próxima ›</button></div>
+</div>
+
+<script id="previa" type="application/json">[{"id":"s37af86","nome":"LOVATIC EXPERIENCE - Edição SÃO PAULO - Augusta Hi-Fi: Rua Augusta, 591","inicio":"2027-01-09T23:00:00-03:00","fim":"2027-01-10T05:00:00-03:00","cidade":"São Paulo","local":"Augusta Hi-Fi","link":""}]</script>
+<script>
+(function(){
+"use strict";
+var WHATS="5511957293333", WHATS_TXT="(11) 95729-3333";
+/* Link vazio = botão some (ou aparece como pendente na playlist/álbum) */
+var LINKS={
+  grupo:"https://chat.whatsapp.com/HiHO7pa8foBBN3knsBuvw3",
+  instagram:"https://www.instagram.com/lovaticparty/",
+  tiktok:"https://www.tiktok.com/@lovaticparty",
+  spotify:"",
+  album:"https://www.facebook.com/irregularsp/photos/"
+};
+var LOGO="logo-lovatic.webp";
+var FOTOS=["01","02","03","04","05","06","07","08","09"];           /* ex.: ["01","02",...] — arquivos fotos/01.webp e fotos/01-t.webp */
+
+var ICO={ /* ícones simples desenhados aqui, sem marcas */
+  ingressos:'<path d="M3 8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4z"/><path d="M15 6v12" stroke-dasharray="2 2"/>',
+  fale:'<path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8M8 13h5"/>',
+  playlist:'<path d="M9 18V6l11-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/>',
+  fotos:'<rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M3 17l5-5 4 4 3-3 6 6"/>',
+  grupo:'<circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 19c0-3.3 2.5-5.5 5.5-5.5s5.5 2.2 5.5 5.5M14 14.2c3.5-.6 7 1.3 7 4.8"/>',
+  instagram:'<rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M8 7l1.5-3h5L16 7"/><circle cx="12" cy="13.5" r="3.5"/>',
+  tiktok:'<rect x="3" y="4" width="18" height="16" rx="3"/><path d="M10 9v6l5-3z" fill="currentColor"/>'
+};
+function ico(n){return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+ICO[n]+'</svg>'}
+
+var PEDAIS=[
+  {id:"ingressos",rot:"INGRESSOS",c:"#ff2d95",tela:true},
+  {id:"fale",rot:"Fale conosco",c:"#8b5cf6",tela:true},
+  {id:"fotos",rot:"Fotos",c:"#e0245e",tela:true},
+  {id:"instagram",rot:"Instagram",c:"#c2186b",href:LINKS.instagram},
+  {id:"tiktok",rot:"TikTok",c:"#3b2f3a",href:LINKS.tiktok},
+  {id:"grupo",rot:"Grupo no WhatsApp",c:"#1f9d6b",href:LINKS.grupo,largo:true}
+];
+
+var $=function(s){return document.querySelector(s)};
+var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
+function track(ev,dados){try{dados=dados||{};dados.festa="lovatic";if(window.gtag)gtag("event",ev,dados)}catch(e){}}
+
+if(LOGO){["#logo-intro","#logo-topo"].forEach(function(s){$(s).innerHTML='<img class="logo" src="'+LOGO+'" alt="Lovatic Experience" width="720" height="194">'})}
+
+/* ---------- Eventos ---------- */
+var MES=["JAN","FEV","MAR","ABR","MAI","JUN","JUL","AGO","SET","OUT","NOV","DEZ"];
+var SEM=["DOM","SEG","TER","QUA","QUI","SEX","SÁB"];
+var ENDERECO=/(\bR\.|\bRua\b|\bAv\.|\bAvenida\b|\bAlameda\b|\bAl\.|\bRod\.|\bEstrada\b|,\s*\d)/i;
+var SO_CIDADE=/^edi[çc][ãa]o\b/i;   /* "Edição SÃO PAULO" repete a cidade: some */
+function titulo(s){
+  if(s!==s.toUpperCase())return s;
+  return s.toLowerCase().replace(/(^|\s)(\S)/g,function(m,a,b){return a+b.toUpperCase()});
+}
+function prepara(ev,ajuste){
+  ajuste=ajuste||{};
+  var partes=ev.nome.split(/\s+-\s+/).slice(1).filter(function(p){return !ENDERECO.test(p)&&!SO_CIDADE.test(p)});
+  var d=ev.inicio.match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})/);
+  var dt=new Date(+d[1],+d[2]-1,+d[3]);
+  var num=parseInt(ev.id.replace(/^s/,""),16);
+  return {
+    id:ev.id,cidade:ev.cidade,
+    sub:ajuste.titulo||partes.map(titulo).join(" · "),
+    local:titulo(ev.local||""),
+    dia:d[3],mes:MES[+d[2]-1],sem:SEM[dt.getDay()],
+    hora:(+d[4])+"h"+(d[5]!=="00"?d[5]:""),
+    estreia:/^\s*estreia/i.test(ev.nome),
+    selo:ajuste.selo||"",
+    fim:new Date(ev.fim).getTime(),
+    url:ev.link||("https://www.sympla.com.br/event__"+num)
+  };
+}
+var EVENTOS=[];
+function carrega(){
+  var previa=[];try{previa=JSON.parse($("#previa").textContent)}catch(e){}
+  return Promise.all([
+    fetch("eventos.json",{cache:"no-store"}).then(function(r){if(!r.ok)throw 0;return r.json()}).catch(function(){return previa}),
+    fetch("ajustes.json",{cache:"no-store"}).then(function(r){if(!r.ok)throw 0;return r.json()}).catch(function(){return {eventos:{}}})
+  ]).then(function(res){
+    var lista=Array.isArray(res[0])?res[0]:(res[0].eventos||[]);
+    var aj=(res[1]&&res[1].eventos)||{};
+    var agora=Date.now();
+    EVENTOS=lista.filter(function(e){return !(aj[e.id]&&aj[e.id].ocultar)})
+      .map(function(e){return prepara(e,aj[e.id])})
+      .filter(function(e){return e.fim>agora})
+      .sort(function(a,b){return a.fim-b.fim});
+    var n=EVENTOS.length;
+    $("#contagem").textContent=n?(n===1?"1 DATA À VENDA":n+" DATAS À VENDA"):"NOVAS DATAS EM BREVE";
+    $("#topo-datas").textContent=n===1?"1 DATA":n+" DATAS";
+    if(atual==="ingressos")abre("ingressos",true);
+  });
+}
+
+/* ---------- Seções ---------- */
+var atual="";
+var TELAS={
+  ingressos:function(){
+    $("#set-info").textContent=EVENTOS.length?(EVENTOS.length===1?"1 data":EVENTOS.length+" datas"):"";
+    if(!EVENTOS.length)return '<div class="vazio">Nenhuma data à venda agora.<br>Novas cidades em breve.</div>';
+    return EVENTOS.map(function(e){
+      var selo=e.selo==="esgotado"?'<span class="selo esgotado">ESGOTADO</span>':e.selo==="ultimos"?'<span class="selo ultimos">ÚLTIMOS</span>':"";
+      if(e.estreia)selo='<span class="selo">ESTREIA</span>'+selo;
+      return '<article class="evento">'+
+        '<div class="data" aria-label="'+e.dia+' '+e.mes+'"><span class="dia">'+e.dia+'</span><span class="mes">'+e.mes+'</span><span class="sem">'+e.sem+'</span></div>'+
+        '<div class="ev-info"><div class="ev-topo"><h3 class="cidade">'+esc(e.cidade)+'</h3>'+selo+'</div>'+
+        (e.sub?'<div class="sub">'+esc(e.sub)+'</div>':'')+
+        '<div class="onde">'+esc(e.local)+(e.local?' · ':'')+e.hora+'</div>'+
+        (e.selo==="esgotado"?'<span class="comprar off">Esgotado</span>':'<a class="comprar" href="'+esc(e.url)+'" target="_blank" rel="noopener" data-ev="'+esc(e.cidade)+'">Comprar</a>')+
+        '</div></article>';
+    }).join("");
+  },
+  fale:function(){
+    $("#set-info").textContent="atendimento";
+    return '<div class="balao"><p>Oi! Nosso atendimento é no WhatsApp <span class="num">'+WHATS_TXT+'</span>. Podemos te transferir?</p><p>Ao mandar mensagem lá, já diga para qual cidade deseja informações. :)</p></div>'+
+      '<div class="acoes"><a class="btn" style="--c:#1f9d6b" id="transfere" target="_blank" rel="noopener" href="https://wa.me/'+WHATS+'?text='+encodeURIComponent("Oi! Vim pela página da Lovatic Experience.")+'">Sim, me transfere</a></div>'+
+      '<form class="form-msg" id="form-msg"><label for="msg" hidden>Mensagem</label><input id="msg" name="msg" placeholder="Ou escreva aqui…" autocomplete="off"><button class="btn" type="submit">Enviar</button></form>';
+  },
+  playlist:function(){
+    $("#set-info").textContent="spotify";
+    var disco='<svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="48" fill="#16111a"/><circle cx="50" cy="50" r="40" fill="none" stroke="#2e2430" stroke-width="1.5"/><circle cx="50" cy="50" r="33" fill="none" stroke="#2e2430" stroke-width="1.5"/><circle cx="50" cy="50" r="26" fill="none" stroke="#2e2430" stroke-width="1.5"/><circle cx="50" cy="50" r="17" fill="#ff2d95"/><path d="M50 44.5c-2-3.5-7.5-2.4-7.5 1.6 0 3.4 4.3 6 7.5 8.6 3.2-2.6 7.5-5.2 7.5-8.6 0-4-5.5-5.1-7.5-1.6z" fill="#fff"/><circle cx="50" cy="50" r="1.6" fill="#16111a"/></svg>';
+    return '<div class="disco">'+disco+'<div><h3>Lovatic Experience</h3><p>As músicas que tocam na festa.</p>'+
+      (LINKS.spotify?'<a class="btn" style="--c:#1f9d6b" id="ouvir" target="_blank" rel="noopener" href="'+LINKS.spotify+'">Ouvir</a>':'<span class="btn" style="--c:#9a909d">Ouvir</span><span class="pendente">link pendente</span>')+
+      '</div></div>';
+  },
+  fotos:function(){
+    $("#set-info").textContent=FOTOS.length?FOTOS.length+" fotos":"";
+    var album=LINKS.album?'<a class="album" id="album" href="'+LINKS.album+'" target="_blank" rel="noopener"><span><b>Ver todos os álbuns</b><small>Fotos de todas as edições</small></span><span class="seta" aria-hidden="true">›</span></a>':'';
+    var grade=FOTOS.length
+      ?FOTOS.map(function(f,i){return '<button type="button" data-foto="'+i+'" aria-label="Abrir foto '+(i+1)+'"><img src="fotos/'+f+'-t.webp" alt="" loading="lazy" width="360" height="480"></button>'}).join("")
+      :[1,2,3,4,5,6,7,8,9].map(function(){return '<div class="vaga">foto</div>'}).join("");
+    return album+'<div class="grade">'+grade+'</div>';
+  }
+};
+var NOMES={ingressos:"Ingressos",fale:"Fale conosco",playlist:"Playlist",fotos:"Fotos"};
+
+function abre(id,quieto){
+  atual=id;
+  $("#set-titulo").textContent=NOMES[id];
+  $("#set").innerHTML=TELAS[id]();
+  document.querySelectorAll(".pedal[data-tela]").forEach(function(b){b.setAttribute("aria-current",b.dataset.tela===id?"true":"false")});
+  if(!quieto)track("abrir_janela",{janela:id});
+}
+function montaPedais(){
+  $("#pedais").innerHTML=PEDAIS.filter(function(b){return b.tela||b.href}).map(function(b){
+    var dentro=ico(b.id)+'<span class="rot">'+b.rot+'</span><span class="led" aria-hidden="true"></span>';
+    return '<li'+(b.id==="ingressos"||b.largo?' class="largo"':'')+'>'+(b.tela
+      ?'<button class="pedal" type="button" data-tela="'+b.id+'" style="--c:'+b.c+'">'+dentro+'</button>'
+      :'<a class="pedal" href="'+b.href+'" target="_blank" rel="noopener" data-rede="'+b.id+'" style="--c:'+b.c+'">'+dentro+'</a>')+'</li>';
+  }).join("");
+}
+
+/* ---------- Visor de fotos ---------- */
+var vi=0;
+function mostraFoto(i){vi=(i+FOTOS.length)%FOTOS.length;$("#visor-img").src="fotos/"+FOTOS[vi]+".webp";$("#visor-n").textContent=(vi+1)+"/"+FOTOS.length}
+function abreVisor(i){mostraFoto(i);$("#visor").hidden=false;$("#visor-fechar").focus();track("ver_foto",{foto:i+1})}
+function fechaVisor(){$("#visor").hidden=true}
+$("#visor-fechar").onclick=fechaVisor;
+$("#visor-ant").onclick=function(){mostraFoto(vi-1)};
+$("#visor-prox").onclick=function(){mostraFoto(vi+1)};
+document.addEventListener("keydown",function(e){if($("#visor").hidden)return;if(e.key==="Escape")fechaVisor();if(e.key==="ArrowLeft")mostraFoto(vi-1);if(e.key==="ArrowRight")mostraFoto(vi+1)});
+(function(){var x0=null,v=$("#visor");v.addEventListener("touchstart",function(e){x0=e.touches[0].clientX},{passive:true});v.addEventListener("touchend",function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)mostraFoto(vi+(dx<0?1:-1));x0=null})})();
+
+/* ---------- Cliques ---------- */
+document.addEventListener("click",function(e){
+  var t=e.target.closest("[data-tela],[data-foto],[data-rede],.comprar,#transfere,#album,#ouvir");
+  if(!t)return;
+  if(t.dataset.tela)return abre(t.dataset.tela);
+  if(t.dataset.foto)return abreVisor(+t.dataset.foto);
+  if(t.dataset.rede)return track("clique_rede",{rede:t.dataset.rede});
+  if(t.classList.contains("comprar"))return track("clique_ingresso",{cidade:t.dataset.ev});
+  if(t.id==="transfere")return track("clique_whatsapp",{origem:"transfere"});
+  if(t.id==="album")return track("clique_album");
+  if(t.id==="ouvir")return track("clique_playlist");
+});
+document.addEventListener("submit",function(e){
+  if(e.target.id!=="form-msg")return;
+  e.preventDefault();
+  var txt=$("#msg").value.trim()||"Oi! Vim pela página da Lovatic Experience.";
+  track("clique_whatsapp",{origem:"mensagem"});
+  var a=document.createElement("a");a.href="https://wa.me/"+WHATS+"?text="+encodeURIComponent(txt);a.target="_blank";a.rel="noopener";document.body.appendChild(a);a.click();a.remove();
+});
+
+/* ---------- Entrada ---------- */
+function entra(){
+  var intro=$("#intro");
+  if(intro.hidden)return;
+  intro.classList.add("saindo");
+  setTimeout(function(){intro.hidden=true;var s=$("#show");s.hidden=false;s.classList.add("entra");window.scrollTo(0,0)},
+    matchMedia("(prefers-reduced-motion: reduce)").matches?0:420);
+  track("abrir_festa");
+}
+$("#entrar").addEventListener("click",entra);
+document.addEventListener("keydown",function(e){if(!$("#intro").hidden&&e.key==="Enter"){e.preventDefault();entra()}});
+
+montaPedais();
+abre("ingressos",true);
+carrega();
+if(/^#(ingressos|fale|fotos)$/.test(location.hash)){$("#intro").hidden=true;$("#show").hidden=false;abre(location.hash.slice(1),true)}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+ "_como_usar": "Coloque o id do evento (o mesmo do eventos.json, ex.: s37af86) e o que quer mudar. selo: \"esgotado\" ou \"ultimos\". titulo: troca o subtítulo. ocultar: true esconde o evento. Apague a linha para voltar ao normal.",
+ "_exemplo": {
+  "s37af86": {
+   "selo": "ultimos"
+  }
+ },
+ "eventos": {}
+}

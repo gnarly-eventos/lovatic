@@ -38,7 +38,7 @@ jobs:
       - name: Montar o site
         run: |
           mkdir _site
-          cp -r index.html eventos.json ajustes.json robots.txt og.jpg logo-lovatic.webp fotos _site/
+          cp -r index.html eventos.json ajustes.json robots.txt og-galpao.jpg logo-lovatic.webp fotos _site/
 
       - uses: actions/configure-pages@v5
 
